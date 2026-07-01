@@ -25,6 +25,8 @@ public class Main {
 
             System.out.print("Por favor, selecciona una opción: ");
             int opcionMenu = sc.nextInt();
+
+            System.out.println("Opción leída: " + opcionMenu);
  
             switch (opcionMenu) {
                 case 1 -> {
@@ -49,10 +51,11 @@ public class Main {
                         break; 
                     }
  
-                    maquina.generarVenta(opcionMenu, dinero, tipoElegido);
+                    maquina.generarVenta(seleccion, dinero, tipoElegido);
                 }
                 case 2 -> {
                     // 2. panel admin (ver ganancias)
+                    System.out.println("entro case 2");
                     maquina.mostrarReporteAdministrador();
                 }
                 case 3 -> {
